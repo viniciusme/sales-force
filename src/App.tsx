@@ -1,9 +1,14 @@
 import React from 'react';
+import Cadastro from './pages/cadastro';
+import Login from './pages/login';
+
+import GlobalStyle from './styles/global';
 
 function App() {
   return (
     <div className='App'>
-      <h1>Teste</h1>
+      <Login />
+      <GlobalStyle />
     </div>
   );
 }
