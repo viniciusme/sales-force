@@ -6,26 +6,36 @@ import Button from '../button/Button';
 
 const CardSign = () => {
   return (
-    <CardSign.Card>
-      <CardSign.Title>
-        <p>
-          Bem-vindo a <strong>Castro Naves</strong>
-        </p>
-        <p>Conecte-se</p>
-      </CardSign.Title>
-      <FormSign />
-      <CardActions>
-        <Button />
-      </CardActions>
-    </CardSign.Card>
+    <Section>
+      <CardSign.Card>
+        <CardSign.Title>
+          <p>
+            Bem-vindo a <Strong>Castro Naves</Strong>
+          </p>
+        </CardSign.Title>
+        <CardSign.SubTitle>
+          <p>Conecte-se</p>
+        </CardSign.SubTitle>
+        <FormSign />
+        <CardActions>
+          <Button />
+        </CardActions>
+      </CardSign.Card>
+    </Section>
   );
 };
+
+const Section = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`;
 
 CardSign.Card = styled.div`
   position: absolute;
   width: 44.916rem;
   height: 58.416rem;
-  left: 60%;
+  left: end;
   top: 15%;
   background: #ffffff;
   box-shadow: -1.666rem -1.666rem 5rem rgba(0, 0, 0, 0.25),
@@ -35,8 +45,28 @@ CardSign.Card = styled.div`
 `;
 
 CardSign.Title = styled.div`
-  font-size: 1.333rem;
-  margin-bottom: 1.666rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 32px;
+  color: #333333;
+  margin-bottom: -20px;
+`;
+
+const Strong = styled.strong`
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 21px;
+  color: #c00d0d;
+`;
+
+CardSign.SubTitle = styled.div`
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  color: #333333;
+  margin-bottom: 60px;
 `;
 
 export default CardSign;

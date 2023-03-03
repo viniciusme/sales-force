@@ -36,7 +36,7 @@ const Login = () => {
 const Section = styled.div`
   background-color: #c00d0d;
   width: 100%;
-  height: 30rem;
+  height: 50vh;
 `;
 
 const Container = styled.div`
