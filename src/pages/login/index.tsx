@@ -2,13 +2,15 @@ import React from 'react';
 import CardSign from '../../components/sign/CardSign';
 import styled from '@emotion/styled';
 
+import logoWhite from '../../assets/images/logo/logo-white.svg';
+
 const Login = () => {
   return (
     <>
       <Section>
         <Container>
           <Logo>
-            <img src='' alt='Logo Castro Naves' />
+            <Img src={logoWhite} alt='Logo Castro Naves' />
           </Logo>
           <Title>Força de Vendas</Title>
           <SubTitle>Vendas organizadas, ágeis e sem retrabalho</SubTitle>
@@ -43,8 +45,14 @@ const Container = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 350px;
-  height: 94px;
+  width: 29.166rem;
+  height: 7, 833rem;
+`;
+
+const Img = styled.img`
+  max-width: 29.166rem;
+  max-height: 7, 833rem;
+  margin-top: 2.666rem;
 `;
 
 const Title = styled.h3``;

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, CardActions, CardContent } from '@mui/material';
+import { CardActions } from '@mui/material';
 import styled from '@emotion/styled';
 import FormSign from '../form/FormSign';
+import Button from '../button/Button';
 
 const CardSign = () => {
   return (
@@ -14,7 +15,7 @@ const CardSign = () => {
       </CardSign.Title>
       <FormSign />
       <CardActions>
-        <Button>Entrar</Button>
+        <Button />
       </CardActions>
     </CardSign.Card>
   );
@@ -22,20 +23,20 @@ const CardSign = () => {
 
 CardSign.Card = styled.div`
   position: absolute;
-  width: 539px;
-  height: 701px;
+  width: 44.916rem;
+  height: 58.416rem;
   left: 60%;
   top: 15%;
   background: #ffffff;
-  box-shadow: -20px -20px 60px rgba(0, 0, 0, 0.25),
-    20px 20px 60px rgba(0, 0, 0, 0.2);
-  border-radius: 40px;
-  padding: 30px;
+  box-shadow: -1.666rem -1.666rem 5rem rgba(0, 0, 0, 0.25),
+    1.666rem 1.666rem 5rem rgba(0, 0, 0, 0.2);
+  border-radius: 3.333rem;
+  padding: 2.5rem;
 `;
 
 CardSign.Title = styled.div`
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 1.333rem;
+  margin-bottom: 1.666rem;
 `;
 
 export default CardSign;
