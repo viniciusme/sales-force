@@ -1,12 +1,10 @@
-import React from 'react';
-
-import logo from './logo.svg';
+import logoFavicon from './logo.svg';
 
 const Header = () => {
   return (
     <>
       <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
+        <img src={logoFavicon} className='App-logo' alt='logo' />
         <p>
           Edite o arquivo <code>src/App.tsx</code> e salve para recarregar.
         </p>

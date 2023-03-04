@@ -2,19 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 
-html, body {
+* {
   padding: 0;
   margin: 0;
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2.3333rem;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  overflow-x: hidden;
-}
-
-* {
+  outline: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
@@ -22,6 +13,18 @@ html, body {
   /* Firefox */
   -webkit-font-smoothing: antialiased;
   /* WebKit  */
+}
+
+html, body {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2.3333rem;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-x: hidden;
+  background-color: ${(props) => props.theme.colors.backgroundColor};
+  color: ${(props) => props.theme.colors.textColor};
 }
 
 .container {

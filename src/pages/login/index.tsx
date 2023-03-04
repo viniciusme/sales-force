@@ -1,4 +1,3 @@
-import React from 'react';
 import CardSign from '../../components/sign/CardSign';
 import styled from '@emotion/styled';
 
@@ -20,12 +19,6 @@ const Login = () => {
             etapas do negócio e proporcionamos mais tempo para criar
             estratégias, fazer novas parcerias e crescer.
           </Summary>
-          <AreaLogistics>
-            <img src='' alt='Imagem representando sistema de e-commerce' />
-            <img src='' alt='Imagem de caminhão vermelho da logística' />
-            <img src='' alt='Imagem de caminhão amarelo da logística' />
-            <img src='' alt='' />
-          </AreaLogistics>
           <CardSign />
         </Container>
       </Section>
@@ -36,7 +29,7 @@ const Login = () => {
 const Section = styled.div`
   background-color: #c00d0d;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
 `;
 
 const Container = styled.div`
@@ -45,22 +38,41 @@ const Container = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 29.166rem;
-  height: 7, 833rem;
+  width: 270px;
+  height: 73.2px;
+  margin-bottom: 80px;
 `;
 
 const Img = styled.img`
-  max-width: 29.166rem;
-  max-height: 7, 833rem;
+  max-width: 270px;
+  max-height: 73.2px;
   margin-top: 2.666rem;
 `;
 
-const Title = styled.h3``;
+const Title = styled.p`
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  color: #ffffff;
+  margin-bottom: 10px;
+`;
 
-const SubTitle = styled.h6``;
+const SubTitle = styled.p`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 30px;
+`;
 
-const Summary = styled.p``;
-
-const AreaLogistics = styled.div``;
+const Summary = styled.p`
+  font-size: 12px;
+  line-height: 24px;
+  color: #ffffff;
+  max-width: 500px;
+  text-align: justify;
+`;
 
 export default Login;

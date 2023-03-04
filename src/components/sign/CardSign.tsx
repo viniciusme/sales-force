@@ -1,4 +1,3 @@
-import React from 'react';
 import { CardActions } from '@mui/material';
 import styled from '@emotion/styled';
 import FormSign from '../form/FormSign';
@@ -20,6 +19,10 @@ const CardSign = () => {
         <CardActions>
           <Button />
         </CardActions>
+        <CardSign.Footer>
+          <p>Ainda não tem conta?</p>
+          <Span>Cadastre-se</Span>
+        </CardSign.Footer>
       </CardSign.Card>
     </Section>
   );
@@ -33,10 +36,10 @@ const Section = styled.div`
 
 CardSign.Card = styled.div`
   position: absolute;
-  width: 44.916rem;
-  height: 58.416rem;
+  width: 41.25rem;
+  height: 52.333rem;
   left: end;
-  top: 15%;
+  top: calc(100vh - 85%);
   background: #ffffff;
   box-shadow: -1.666rem -1.666rem 5rem rgba(0, 0, 0, 0.25),
     1.666rem 1.666rem 5rem rgba(0, 0, 0, 0.2);
@@ -47,16 +50,16 @@ CardSign.Card = styled.div`
 CardSign.Title = styled.div`
   font-style: normal;
   font-weight: 600;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 32px;
   color: #333333;
-  margin-bottom: -20px;
+  margin-bottom: 5px;
 `;
 
 const Strong = styled.strong`
   font-style: normal;
   font-weight: 600;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 21px;
   color: #c00d0d;
 `;
@@ -64,9 +67,25 @@ const Strong = styled.strong`
 CardSign.SubTitle = styled.div`
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 25px;
   color: #333333;
   margin-bottom: 60px;
+`;
+
+CardSign.Footer = styled.div`
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #8d8d8d;
+  margin-top: 15px;
+`;
+
+const Span = styled.span`
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+  color: #c00d0d;
 `;
 
 export default CardSign;

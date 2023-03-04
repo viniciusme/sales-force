@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaUserAlt, FaLock, FaEyeSlash } from 'react-icons/fa';
 import styled from '@emotion/styled';
 
@@ -18,7 +17,7 @@ const FormSign = () => {
           <Input type='password' placeholder='Informe sua Senha' />
           <IconEye />
         </Section>
-        <p>Esqueceu sua senha?</p>
+        <ForgotPassword>Esqueceu sua senha?</ForgotPassword>
       </Form>
     </>
   );
@@ -36,20 +35,20 @@ const Section = styled.div`
 const Label = styled.label`
   font-style: normal;
   font-weight: 400;
-  font-size: 1.333rem;
+  font-size: 14px;
   line-height: 2rem;
   color: #000000;
   margin-bottom: 10px;
 `;
 
 const Input = styled.input`
-  width: 37.583rem;
-  height: 4.75rem;
+  width: 433px;
+  height: 57px;
   background: #f3f3f3;
   border: 0.083rem solid #c4cfde;
   border-radius: 0.833rem;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   color: #959090;
   padding: 0px 0px 0px 45px;
   margin-top: 10px;
@@ -57,26 +56,36 @@ const Input = styled.input`
 
 const IconUser = styled(FaUserAlt)`
   position: relative;
-  top: 60px;
-  left: -200px;
-  font-size: 16px;
+  top: 55px;
+  left: -170px;
+  font-size: 14px;
   color: #959090;
 `;
 
 const IconPadlock = styled(FaLock)`
   position: relative;
-  top: 60px;
-  left: -200px;
-  font-size: 16px;
+  top: 55px;
+  left: -170px;
+  font-size: 14px;
   color: #959090;
 `;
 
 const IconEye = styled(FaEyeSlash)`
   position: relative;
-  top: 5px;
-  left: -35px;
+  top: -37px;
+  left: 390px;
   font-size: 22px;
   color: #959090;
+`;
+
+const ForgotPassword = styled.p`
+  position: relative;
+  left: 287px;
+  top: -40px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  color: #c00d0d;
 `;
 
 export default FormSign;
