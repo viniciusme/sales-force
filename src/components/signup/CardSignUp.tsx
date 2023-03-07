@@ -17,7 +17,7 @@ const CardSignUp = () => {
         </CardSignUp.SubTitle>
         <FormSignUp />
         <CardSignUp.CardActions>
-          <Button />
+          <Button name='Cadastrar' />
         </CardSignUp.CardActions>
         <CardSignUp.Footer>
           <p>Ja tem uma conta?</p>

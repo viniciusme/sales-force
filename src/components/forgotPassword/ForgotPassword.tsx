@@ -18,7 +18,7 @@ const ForgotPassword = () => {
           </ForgotPassword.Title>
           <FormForgotPassword />
           <CardActions>
-            <Button />
+            <Button name='Recuperar Senha' />
           </CardActions>
           <Footer>
             <p>Ja tem uma conta?</p>

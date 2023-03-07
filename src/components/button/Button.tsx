@@ -1,9 +1,13 @@
 import styled from '@emotion/styled';
 
-const Buttons = () => {
+export interface ButtonProps {
+  name: string;
+}
+
+const Buttons = ({ name }: ButtonProps) => {
   return (
     <>
-      <Button>Acessar</Button>
+      <Button>{name}</Button>
     </>
   );
 };

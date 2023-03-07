@@ -18,7 +18,7 @@ const CardSignIn = () => {
         </CardSignIn.SubTitle>
         <FormSign />
         <CardActions>
-          <Button />
+          <Button name='Acessar' />
         </CardActions>
         <CardSignIn.Footer>
           <p>Ainda não tem conta?</p>
