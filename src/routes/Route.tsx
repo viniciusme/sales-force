@@ -4,8 +4,12 @@ import Cadastro from '../pages/cadastrar';
 import Dashboard from '../pages/dashboard';
 import Login from '../pages/login';
 import RecuperarSenha from '../pages/recuperar-senha';
+import Exception from '../components/shared/Exception';
 
 const routes = [
+  {
+    errorElement: <Exception />,
+  },
   {
     path: '',
     element: <Login />,

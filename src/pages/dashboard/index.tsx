@@ -21,8 +21,9 @@ import MailIcon from '@mui/icons-material/Mail';
 import { Badge } from '@mui/material';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { AccountCircle } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
-import Avatar from '../../assets/images/avatar/avatar.svg';
+// import Avatar from '../../assets/images/avatar/avatar.svg';
 
 const drawerWidth = 240;
 
@@ -151,22 +152,24 @@ export default function Dashboard() {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              size='large'
-              aria-label='account of current user'
-              aria-controls='menu-appbar'
-              color='inherit'
-            >
-              <AccountCircle
-                sx={{
-                  color: '#fff',
-                  display: 'inline',
-                  fontWeight: 'bold',
-                  mx: 0.5,
-                  fontSize: 24,
-                }}
-              />
-            </IconButton>
+            <Link to='/'>
+              <IconButton
+                size='large'
+                aria-label='account of current user'
+                aria-controls='menu-appbar'
+                color='inherit'
+              >
+                <AccountCircle
+                  sx={{
+                    color: '#fff',
+                    display: 'inline',
+                    fontWeight: 'bold',
+                    mx: 0.5,
+                    fontSize: 24,
+                  }}
+                />
+              </IconButton>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>
@@ -182,10 +185,6 @@ export default function Dashboard() {
         </DrawerHeader>
         <Divider />
         <List sx={{ textAlign: 'center' }}>
-          <img src={Avatar} alt='' />
-        </List>
-        <Divider />
-        <List>
           {[
             'Agenda',
             'Consulta de Produtos',
@@ -216,6 +215,38 @@ export default function Dashboard() {
             </ListItem>
           ))}
         </List>
+        <Divider />
+        {/* <List>
+          {[
+            'Agenda',
+            'Consulta de Produtos',
+            'Ficha de Parceiro',
+            'Lançamento de O.S',
+            'Parceiro Comercial',
+            'Portal de Vendas',
+          ].map((text, index) => (
+            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List> */}
       </Drawer>
       <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
