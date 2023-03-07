@@ -1,7 +1,7 @@
-import CardSign from '../../components/sign/CardSign';
 import styled from '@emotion/styled';
 
 import logoWhite from '../../assets/images/logo/logo-white.svg';
+import CardSignIn from '../../components/signIn/CardSignIn';
 
 const Login = () => {
   return (
@@ -19,7 +19,7 @@ const Login = () => {
             etapas do negócio e proporcionamos mais tempo para criar
             estratégias, fazer novas parcerias e crescer.
           </Summary>
-          <CardSign />
+          <CardSignIn />
         </Container>
       </Section>
     </>
@@ -40,7 +40,7 @@ const Container = styled.div`
 const Logo = styled.div`
   width: 270px;
   height: 73.2px;
-  margin-bottom: 80px;
+  margin-bottom: 150px;
 `;
 
 const Img = styled.img`
@@ -55,23 +55,23 @@ const Title = styled.p`
   font-size: 28px;
   line-height: 42px;
   color: #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 const SubTitle = styled.p`
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 30px;
   color: #ffffff;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 `;
 
 const Summary = styled.p`
-  font-size: 12px;
+  font-size: 13px;
   line-height: 24px;
   color: #ffffff;
-  max-width: 500px;
+  max-width: 487px;
   text-align: justify;
 `;
 

@@ -1,8 +1,7 @@
-import React from 'react';
-import { CardActions } from '@mui/material';
 import styled from '@emotion/styled';
 import FormSignUp from '../form/FormSignUp';
 import Button from '../button/Button';
+import { Link } from 'react-router-dom';
 
 const CardSignUp = () => {
   return (
@@ -22,7 +21,9 @@ const CardSignUp = () => {
         </CardSignUp.CardActions>
         <CardSignUp.Footer>
           <p>Ja tem uma conta?</p>
-          <Span>Entrar</Span>
+          <Link to='/'>
+            <Span>Entrar</Span>
+          </Link>
         </CardSignUp.Footer>
       </CardSignUp.Card>
     </Section>

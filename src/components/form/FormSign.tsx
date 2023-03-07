@@ -1,5 +1,6 @@
 import { FaUserAlt, FaLock, FaEyeSlash } from 'react-icons/fa';
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 const FormSign = () => {
   return (
@@ -17,7 +18,9 @@ const FormSign = () => {
           <Input type='password' placeholder='Informe sua Senha' />
           <IconEye />
         </Section>
-        <ForgotPassword>Esqueceu sua senha?</ForgotPassword>
+        <ForgotPassword>
+          <Link to='/recuperar-senha'>Esqueceu sua senha?</Link>
+        </ForgotPassword>
       </Form>
     </>
   );

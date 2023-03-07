@@ -1,11 +1,8 @@
-import React from 'react';
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { RouterProvider } from 'react-router-dom';
 
-import Cadastro from './pages/cadastro';
-import Login from './pages/login';
-import Dashboard from './pages/dashboard';
-
+import Route from './routes/Route';
 import { lightTheme, darkTheme } from './styles/Theme';
 import GlobalStyle from './styles/global';
 
@@ -18,7 +15,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <Cadastro />
+      <RouterProvider router={Route} />
       <GlobalStyle />
     </ThemeProvider>
   );

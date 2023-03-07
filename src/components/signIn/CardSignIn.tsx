@@ -1,29 +1,32 @@
 import { CardActions } from '@mui/material';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import FormSign from '../form/FormSign';
 import Button from '../button/Button';
+import { Link } from 'react-router-dom';
 
-const CardSign = () => {
+const CardSignIn = () => {
   return (
     <Section>
-      <CardSign.Card>
-        <CardSign.Title>
+      <CardSignIn.Card>
+        <CardSignIn.Title>
           <p>
             Bem-vindo a <Strong>Castro Naves</Strong>
           </p>
-        </CardSign.Title>
-        <CardSign.SubTitle>
+        </CardSignIn.Title>
+        <CardSignIn.SubTitle>
           <p>Conecte-se</p>
-        </CardSign.SubTitle>
+        </CardSignIn.SubTitle>
         <FormSign />
         <CardActions>
           <Button />
         </CardActions>
-        <CardSign.Footer>
+        <CardSignIn.Footer>
           <p>Ainda não tem conta?</p>
-          <Span>Cadastre-se</Span>
-        </CardSign.Footer>
-      </CardSign.Card>
+          <Link to='/cadastrar'>
+            <Span>Cadastre-se</Span>
+          </Link>
+        </CardSignIn.Footer>
+      </CardSignIn.Card>
     </Section>
   );
 };
@@ -34,7 +37,7 @@ const Section = styled.div`
   align-items: center;
 `;
 
-CardSign.Card = styled.div`
+CardSignIn.Card = styled.div`
   position: absolute;
   width: 41.25rem;
   height: 52.333rem;
@@ -47,7 +50,7 @@ CardSign.Card = styled.div`
   padding: 2.5rem;
 `;
 
-CardSign.Title = styled.div`
+CardSignIn.Title = styled.div`
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -64,7 +67,7 @@ const Strong = styled.strong`
   color: #c00d0d;
 `;
 
-CardSign.SubTitle = styled.div`
+CardSignIn.SubTitle = styled.div`
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
@@ -72,7 +75,7 @@ CardSign.SubTitle = styled.div`
   margin-bottom: 60px;
 `;
 
-CardSign.Footer = styled.div`
+CardSignIn.Footer = styled.div`
   font-size: 14px;
   line-height: 21px;
   text-align: center;
@@ -88,4 +91,4 @@ const Span = styled.span`
   color: #c00d0d;
 `;
 
-export default CardSign;
+export default CardSignIn;
