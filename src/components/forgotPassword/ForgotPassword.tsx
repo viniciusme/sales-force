@@ -40,8 +40,8 @@ const Section = styled.div`
 
 ForgotPassword.Card = styled.div`
   position: absolute;
-  width: 41.25rem;
-  height: 36.25rem;
+  width: 450px;
+  height: 350px;
   top: calc(100vh - 75%);
   background: #ffffff;
   box-shadow: -1.666rem -1.666rem 5rem rgba(0, 0, 0, 0.25),
@@ -53,30 +53,30 @@ ForgotPassword.Card = styled.div`
 ForgotPassword.Title = styled.div`
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 21px;
   color: #333333;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 `;
 
 const Strong = styled.strong`
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 21px;
   color: #c00d0d;
 `;
 
 const Footer = styled.div`
-  font-size: 14px;
+  font-size: 12px;
   line-height: 21px;
   text-align: center;
   color: #8d8d8d;
-  margin-top: 20px;
+  margin-top: 10px;
 `;
 
 const Span = styled.span`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 21px;
   text-align: center;

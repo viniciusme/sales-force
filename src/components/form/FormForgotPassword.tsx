@@ -21,35 +21,34 @@ const Form = styled.div`
 `;
 
 const Section = styled.div`
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0px 20px 0px;
 `;
 
 const Label = styled.label`
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 2rem;
   color: #000000;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 const Input = styled.input`
-  width: 433px;
-  height: 57px;
+  width: 400px;
+  height: 50px;
   background: #f3f3f3;
   border: 0.083rem solid #c4cfde;
   border-radius: 0.833rem;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   color: #959090;
   padding: 0px 0px 0px 45px;
-  margin-top: 10px;
 `;
 
 const InconEmail = styled(MdEmail)`
   position: relative;
-  top: 59px;
-  left: -190px;
+  top: 45px;
+  left: -155px;
   font-size: 19px;
   color: #959090;
 `;
