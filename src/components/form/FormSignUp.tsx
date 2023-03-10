@@ -44,11 +44,11 @@ const FormSignUp = () => {
 };
 
 const Form = styled.div`
-  padding: 0px;
+  padding: 8px 0px 0px 0px;
 `;
 
 const Section = styled.div`
-  padding: 8px 0px 0px 0px;
+  padding: 5px 0px 5px 0px;
 `;
 
 const SectionFlex = styled.div`
@@ -61,67 +61,70 @@ const SectionFlex = styled.div`
 const Label = styled.label`
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 2rem;
+  font-size: 12px;
+  line-height: 20px;
   color: #000000;
 `;
 
 const Input = styled.input`
-  width: 433px;
-  height: 57px;
+  width: 390px;
+  height: 50px;
   background: #f3f3f3;
   border: 0.083rem solid #c4cfde;
   border-radius: 0.833rem;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   color: #959090;
-  padding: 0px 0px 0px 45px;
-  margin-top: 5px;
+  padding: 0px 0px 0px 30px;
+  margin-top: 0px;
+  margin-bottom: 5px;
 `;
 
 const InputPhone = styled.input`
-  width: 212px;
-  height: 57px;
+  width: 190px;
+  height: 50px;
   background: #f3f3f3;
   border: 0.083rem solid #c4cfde;
   border-radius: 0.833rem;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   color: #959090;
-  padding: 0px 0px 0px 45px;
+  padding: 0px 0px 0px 30px;
+  margin-bottom: 5px;
 `;
 
 const InputEmail = styled.input`
-  width: 212px;
-  height: 57px;
+  width: 190px;
+  height: 50px;
   background: #f3f3f3;
   border: 0.083rem solid #c4cfde;
   border-radius: 0.833rem;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   color: #959090;
-  padding: 0px 0px 0px 45px;
+  padding: 0px 0px 0px 30px;
+  margin-bottom: 5px;
 `;
 
 const IconUser = styled(FaUserAlt)`
   position: relative;
-  top: 50px;
-  left: -170px;
+  top: 45px;
+  left: -150px;
   font-size: 14px;
   color: #959090;
 `;
 
 const IconPhone = styled(FaPhoneAlt)`
   position: relative;
-  top: 45px;
-  left: -45px;
+  top: 40px;
+  left: -42px;
   font-size: 14px;
   color: #959090;
 `;
 
 const InconEmail = styled(MdEmail)`
   position: relative;
-  top: 45px;
+  top: 42px;
   left: -30px;
   font-size: 14px;
   color: #959090;
@@ -129,25 +132,25 @@ const InconEmail = styled(MdEmail)`
 
 const IconPadlock = styled(FaLock)`
   position: relative;
-  top: 50px;
-  left: -100px;
-  font-size: 16px;
+  top: 45px;
+  left: -92px;
+  font-size: 14px;
   color: #959090;
 `;
 
 const IconPadlockConfirm = styled(FaLock)`
   position: relative;
-  top: 50px;
-  left: -125px;
-  font-size: 16px;
+  top: 45px;
+  left: -112px;
+  font-size: 14px;
   color: #959090;
 `;
 
 const IconEye = styled(FaEyeSlash)`
   position: relative;
-  top: -37px;
-  left: 390px;
-  font-size: 22px;
+  top: -35px;
+  left: 360px;
+  font-size: 16px;
   color: #959090;
 `;
 

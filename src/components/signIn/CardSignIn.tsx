@@ -17,11 +17,9 @@ const CardSignIn = () => {
           <p>Conecte-se</p>
         </CardSignIn.SubTitle>
         <FormSign />
-        <CardActions>
-          <Link to='/dashboard'>
-            <Button name='Acessar' />
-          </Link>
-        </CardActions>
+        <CardAction>
+          <Button name='Acessar' />
+        </CardAction>
         <CardSignIn.Footer>
           <p>Ainda não tem conta?</p>
           <Link to='/cadastrar'>
@@ -41,8 +39,8 @@ const Section = styled.div`
 
 CardSignIn.Card = styled.div`
   position: absolute;
-  width: 41.25rem;
-  height: 52.333rem;
+  width: 450px;
+  height: 444px;
   left: end;
   top: calc(100vh - 85%);
   background: #ffffff;
@@ -55,8 +53,8 @@ CardSignIn.Card = styled.div`
 CardSignIn.Title = styled.div`
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 14px;
+  line-height: 22px;
   color: #333333;
   margin-bottom: 5px;
 `;
@@ -64,17 +62,21 @@ CardSignIn.Title = styled.div`
 const Strong = styled.strong`
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 21px;
+  font-size: 14px;
+  line-height: 22px;
   color: #c00d0d;
 `;
 
 CardSignIn.SubTitle = styled.div`
   font-style: normal;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 14px;
   color: #333333;
-  margin-bottom: 60px;
+`;
+
+const CardAction = styled.div`
+  text-align: center;
+  padding: 0;
 `;
 
 CardSignIn.Footer = styled.div`

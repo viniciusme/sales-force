@@ -21,7 +21,7 @@ const Form = styled.div`
 `;
 
 const Section = styled.div`
-  padding: 20px 0px 20px 0px;
+  padding: 10px 0px 30px 0px;
 `;
 
 const Label = styled.label`
@@ -34,7 +34,7 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  width: 400px;
+  width: 390px;
   height: 50px;
   background: #f3f3f3;
   border: 0.083rem solid #c4cfde;

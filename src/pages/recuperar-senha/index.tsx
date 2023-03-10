@@ -30,14 +30,16 @@ const Container = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 270px;
-  height: 73.2px;
+  width: 200px;
+  height: 52.1px;
   margin-bottom: 150px;
 `;
 
 const Img = styled.img`
-  max-width: 270px;
-  max-height: 73.2px;
+  width: 200px;
+  height: 52.1px;
+  max-width: 200px;
+  max-height: 52.1px;
   margin-top: 2.666rem;
 `;
 

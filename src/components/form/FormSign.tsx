@@ -32,62 +32,61 @@ const Form = styled.div`
 `;
 
 const Section = styled.div`
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0px 0px 0px;
 `;
 
 const Label = styled.label`
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 2rem;
   color: #000000;
   margin-bottom: 10px;
 `;
 
 const Input = styled.input`
-  width: 433px;
-  height: 57px;
+  width: 390px;
+  height: 50px;
   background: #f3f3f3;
   border: 0.083rem solid #c4cfde;
   border-radius: 0.833rem;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   color: #959090;
-  padding: 0px 0px 0px 45px;
-  margin-top: 10px;
+  padding: 0px 0px 0px 35px;
 `;
 
 const IconUser = styled(FaUserAlt)`
   position: relative;
-  top: 55px;
-  left: -170px;
+  top: 40px;
+  left: -150px;
   font-size: 14px;
   color: #959090;
 `;
 
 const IconPadlock = styled(FaLock)`
   position: relative;
-  top: 55px;
-  left: -170px;
+  top: 40px;
+  left: -150px;
   font-size: 14px;
   color: #959090;
 `;
 
 const IconEye = styled(FaEyeSlash)`
   position: relative;
-  top: -37px;
-  left: 390px;
-  font-size: 22px;
+  top: -35px;
+  left: 365px;
+  font-size: 16px;
   color: #959090;
 `;
 
 const ForgotPassword = styled.p`
   position: relative;
-  left: 287px;
-  top: -40px;
+  left: 255px;
+  top: -20px;
   font-weight: 500;
-  font-size: 13px;
-  line-height: 22px;
+  font-size: 12px;
+  line-height: 21px;
   color: #c00d0d;
 `;
 

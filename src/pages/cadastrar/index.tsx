@@ -39,22 +39,24 @@ const Container = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 270px;
-  height: 73.2px;
+  width: 200px;
+  height: 52.1px;
   margin-bottom: 150px;
 `;
 
 const Img = styled.img`
-  max-width: 270px;
-  max-height: 73.2px;
+  width: 200px;
+  height: 52.1px;
+  max-width: 200px;
+  max-height: 52.1px;
   margin-top: 2.666rem;
 `;
 
 const Title = styled.p`
   font-style: normal;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 42px;
+  font-size: 20px;
+  line-height: 22px;
   color: #ffffff;
   margin-bottom: 5px;
 `;
@@ -62,15 +64,15 @@ const Title = styled.p`
 const SubTitle = styled.p`
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 21px;
   color: #ffffff;
   margin-bottom: 80px;
 `;
 
 const Summary = styled.p`
-  font-size: 13px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 20px;
   color: #ffffff;
   max-width: 487px;
   text-align: justify;

@@ -17,7 +17,7 @@ const Button = styled.div`
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  width: 400px;
+  width: 390px;
   height: 60px;
   background: #c00d0d;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

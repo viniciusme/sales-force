@@ -1,4 +1,3 @@
-import { CardActions } from '@mui/material';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -65,6 +64,11 @@ const Strong = styled.strong`
   font-size: 16px;
   line-height: 21px;
   color: #c00d0d;
+`;
+
+const CardActions = styled.div`
+  text-align: center;
+  padding: 0px;
 `;
 
 const Footer = styled.div`
