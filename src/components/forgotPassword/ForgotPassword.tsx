@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import FormForgotPassword from '../form/FormForgotPassword';
-import Button from '../button/Button';
 
 const ForgotPassword = () => {
   return (
@@ -16,15 +15,12 @@ const ForgotPassword = () => {
             </p>
           </ForgotPassword.Title>
           <FormForgotPassword />
-          <CardActions>
-            <Button name='Recuperar Senha' />
-          </CardActions>
-          <Footer>
-            <p>Ja tem uma conta?</p>
-            <Link to='/'>
-              <Span>Entrar</Span>
+          <ForgotPassword.Footer>
+            <p>Ainda não tem conta?</p>
+            <Link to='/cadastrar'>
+              <Span>Cadastre-se</Span>
             </Link>
-          </Footer>
+          </ForgotPassword.Footer>
         </ForgotPassword.Card>
       </Section>
     </>
@@ -66,17 +62,12 @@ const Strong = styled.strong`
   color: #c00d0d;
 `;
 
-const CardActions = styled.div`
-  text-align: center;
-  padding: 0px;
-`;
-
-const Footer = styled.div`
-  font-size: 12px;
+ForgotPassword.Footer = styled.div`
+  font-size: 14px;
   line-height: 21px;
   text-align: center;
   color: #8d8d8d;
-  margin-top: 10px;
+  margin-top: 15px;
 `;
 
 const Span = styled.span`

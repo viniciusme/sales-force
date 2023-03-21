@@ -26,6 +26,9 @@ const routes = [
     path: 'dashboard',
     element: <Dashboard />,
   },
+  {
+    path: 'access',
+  },
 ];
 
 export default createBrowserRouter(routes);

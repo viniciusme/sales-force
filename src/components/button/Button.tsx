@@ -1,18 +1,6 @@
 import styled from '@emotion/styled';
 
-export interface ButtonProps {
-  name: string;
-}
-
-const Buttons = ({ name }: ButtonProps) => {
-  return (
-    <>
-      <Button>{name}</Button>
-    </>
-  );
-};
-
-const Button = styled.div`
+const Button = styled.input`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,6 +14,7 @@ const Button = styled.div`
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
+  border: 0;
   cursor: pointer;
   &:hover {
     background: #ff0000;
@@ -34,4 +23,4 @@ const Button = styled.div`
   }
 `;
 
-export default Buttons;
+export default Button;

@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import FormSignUp from '../form/FormSignUp';
-import Button from '../button/Button';
 import { Link } from 'react-router-dom';
 
 const CardSignUp = () => {
@@ -16,9 +15,6 @@ const CardSignUp = () => {
           <p>Inscreva-se</p>
         </CardSignUp.SubTitle>
         <FormSignUp />
-        <CardSignUp.CardActions>
-          <Button name='Cadastrar' />
-        </CardSignUp.CardActions>
         <CardSignUp.Footer>
           <p>Ja tem uma conta?</p>
           <Link to='/'>
@@ -77,7 +73,7 @@ CardSignUp.Footer = styled.div`
   line-height: 20px;
   text-align: center;
   color: #8d8d8d;
-  margin-top: 10px;
+  margin-top: 5px;
 `;
 
 const Span = styled.span`
@@ -86,10 +82,6 @@ const Span = styled.span`
   line-height: 20px;
   text-align: center;
   color: #c00d0d;
-`;
-
-CardSignUp.CardActions = styled.div`
-  padding: 0px;
 `;
 
 export default CardSignUp;

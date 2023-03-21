@@ -1,5 +1,4 @@
-import styled from '@emotion/styled';
-
+import styled from 'styled-components';
 import logoWhite from '../../assets/images/logo/logo-white.svg';
 import CardSignIn from '../../components/signIn/CardSignIn';
 
@@ -28,7 +27,7 @@ const Login = () => {
 
 const Section = styled.div`
   background-color: #c00d0d;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 `;
 

@@ -1,7 +1,6 @@
-import { CardActions } from '@mui/material';
 import styled from 'styled-components';
 import FormSign from '../form/FormSign';
-import Button from '../button/Button';
+
 import { Link } from 'react-router-dom';
 
 const CardSignIn = () => {
@@ -17,9 +16,6 @@ const CardSignIn = () => {
           <p>Conecte-se</p>
         </CardSignIn.SubTitle>
         <FormSign />
-        <CardAction>
-          <Button name='Acessar' />
-        </CardAction>
         <CardSignIn.Footer>
           <p>Ainda não tem conta?</p>
           <Link to='/cadastrar'>
@@ -72,11 +68,6 @@ CardSignIn.SubTitle = styled.div`
   font-weight: 600;
   font-size: 14px;
   color: #333333;
-`;
-
-const CardAction = styled.div`
-  text-align: center;
-  padding: 0;
 `;
 
 CardSignIn.Footer = styled.div`

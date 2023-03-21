@@ -1,54 +1,142 @@
-import React from 'react';
 import { FaUserAlt, FaLock, FaEyeSlash, FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import styled from '@emotion/styled';
+import { Link, useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+
+import Button from '../button/Button';
+
+const schema = yup
+  .object({
+    name: yup
+      .string()
+      .required('Nome é obrigatório')
+      .min(2, 'Nome deve ter pelo menos 2 dígitos'),
+    phone: yup
+      .string()
+      .required('Telefone é obrigatório')
+      .matches(/^[0-9]{10,11}$/, 'Telefone inválido'),
+    email: yup
+      .string()
+      .required('E-mail é obrigatório')
+      .email('Informe um e-mail válido'),
+    password: yup
+      .string()
+      .required('Password é obrigatório')
+      .min(8, 'Password deve ter pelo menos 8 dígitos'),
+    confirmPassword: yup
+      .string()
+      .required('Confirmar password é obrigatório')
+      .oneOf([yup.ref('password')], 'As senhas devem ser iguais'),
+  })
+  .required();
+type FormData = yup.InferType<typeof schema>;
 
 const FormSignUp = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+  });
+
+  const navigate = useNavigate();
+
+  const onSubmit = (userData: FormData) => {
+    console.log(userData);
+
+    navigate('/');
+  };
+
+  console.log(errors);
+
   return (
     <>
-      <Form>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <Section>
-          <Label>Digite seu nome completo</Label>
-          <IconUser />
-          <Input type='name' placeholder='Nome Completo' />
+          <Label>
+            Digite seu nome completo
+            <IconUser />
+            <Input
+              type='text'
+              {...register('name')}
+              placeholder='Nome Completo'
+            />
+          </Label>
+          <Error>{errors.name?.message}</Error>
         </Section>
 
         <SectionFlex>
           <Section>
-            <Label>Telefone</Label>
-            <IconPhone />
-            <InputPhone type='phone' placeholder='xx xxxxx-xxxx' />
+            <Label>
+              Telefone
+              <IconPhone />
+              <InputPhone
+                type='text'
+                {...register('phone')}
+                placeholder='xx xxxxx-xxxx'
+              />
+            </Label>
+            <Error>{errors.phone?.message}</Error>
           </Section>
           <Section>
-            <Label>E-mail</Label>
-            <InconEmail />
-            <InputEmail type='email' placeholder='Informe seu email' />
+            <Label>
+              E-mail
+              <InconEmail />
+              <InputEmail
+                type='text'
+                {...register('email')}
+                placeholder='Informe seu email'
+              />
+            </Label>
+            <Error>{errors.email?.message}</Error>
           </Section>
         </SectionFlex>
 
         <Section>
-          <Label>Digite sua senha</Label>
-          <IconPadlock />
-          <Input type='name' placeholder='xxxxxxxx' />
+          <Label>
+            Digite sua senha
+            <IconPadlock />
+            <Input
+              type='password'
+              {...register('password')}
+              placeholder='********'
+            />
+          </Label>
+          <Error>{errors.password?.message}</Error>
         </Section>
 
         <Section>
-          <Label>Confirme sua senha</Label>
-          <IconPadlockConfirm />
-          <Input type='name' placeholder='xxxxxxxx' />
+          <Label>
+            Confirme sua senha
+            <IconPadlockConfirm />
+            <Input
+              type='password'
+              {...register('confirmPassword')}
+              placeholder='********'
+            />
+          </Label>
+          <Error>{errors.confirmPassword?.message}</Error>
           <IconEye />
         </Section>
+
+        <CardAction>
+          <Button type='submit' value='Cadastrar' />
+        </CardAction>
       </Form>
     </>
   );
 };
 
-const Form = styled.div`
+const Form = styled.form`
   padding: 8px 0px 0px 0px;
 `;
 
 const Section = styled.div`
-  padding: 5px 0px 5px 0px;
+  padding: 5px 0px 8px 0px;
 `;
 
 const SectionFlex = styled.div`
@@ -106,6 +194,14 @@ const InputEmail = styled.input`
   margin-bottom: 5px;
 `;
 
+const Error = styled.p`
+  position: absolute;
+  color: #c00d0d;
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 0px;
+`;
+
 const IconUser = styled(FaUserAlt)`
   position: relative;
   top: 45px;
@@ -152,6 +248,11 @@ const IconEye = styled(FaEyeSlash)`
   left: 360px;
   font-size: 16px;
   color: #959090;
+`;
+
+const CardAction = styled.div`
+  text-align: center;
+  padding: 0;
 `;
 
 export default FormSignUp;
