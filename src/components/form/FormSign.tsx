@@ -35,7 +35,7 @@ const FormSign = () => {
   const onSubmit = (userData: FormData) => {
     console.log(userData);
 
-    navigate('/dashboard');
+    navigate('/layout');
   };
 
   return (
