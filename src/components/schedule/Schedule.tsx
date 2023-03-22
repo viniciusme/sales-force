@@ -1,4 +1,4 @@
-const Agenda = () => {
+const Schedule = () => {
   return (
     <>
       <h1>Agenda</h1>
@@ -6,4 +6,4 @@ const Agenda = () => {
   );
 };
 
-export default Agenda;
+export default Schedule;

@@ -5,9 +5,12 @@ import Login from '../pages/login';
 import Cadastro from '../pages/cadastrar';
 import RecuperarSenha from '../pages/recuperar-senha';
 import Layout from '../layout/layout';
-import Agenda from '../components/agenda/Agenda';
-
+import Schedule from '../components/schedule/Schedule';
 import Dashboard from '../pages/dashboard';
+import PartnerCard from '../components/partnerCard/PartnerCard';
+import OsRelease from '../components/osRelease/OsRelease';
+import CommercialPartner from '../components/commercialPartner/CommercialPartner';
+import SalesPortal from '../components/salesPortal/SalesPortal';
 
 const routes = [
   {
@@ -35,7 +38,23 @@ const routes = [
       },
       {
         path: 'agenda',
-        element: <Agenda />,
+        element: <Schedule />,
+      },
+      {
+        path: 'ficha-de-parceiro',
+        element: <PartnerCard />,
+      },
+      {
+        path: 'lancamento-de-os',
+        element: <OsRelease />,
+      },
+      {
+        path: 'parceiro-comercial',
+        element: <CommercialPartner />,
+      },
+      {
+        path: 'portal-de-vendas',
+        element: <SalesPortal />,
       },
     ],
   },

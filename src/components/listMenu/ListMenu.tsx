@@ -4,6 +4,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { Link } from 'react-router-dom';
 
 const ListMenu = () => {
@@ -13,7 +15,9 @@ const ListMenu = () => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <InboxIcon />
+              <Link to='dashboard'>
+                <DashboardIcon />
+              </Link>
             </ListItemIcon>
             <Link to='dashboard'>
               <ListItemText primary='Dashboard' />
@@ -23,7 +27,9 @@ const ListMenu = () => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <InboxIcon />
+              <Link to='agenda'>
+                <CalendarMonthIcon />
+              </Link>
             </ListItemIcon>
             <Link to='agenda'>
               <ListItemText primary='Agenda' />
@@ -33,9 +39,11 @@ const ListMenu = () => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <InboxIcon />
+              <Link to='ficha-de-parceiro'>
+                <InboxIcon />
+              </Link>
             </ListItemIcon>
-            <Link to='ficha-parceiro'>
+            <Link to='ficha-de-parceiro'>
               <ListItemText primary='Ficha de Parceiro' />
             </Link>
           </ListItemButton>
@@ -43,7 +51,9 @@ const ListMenu = () => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <InboxIcon />
+              <Link to='lancamento-de-os'>
+                <InboxIcon />
+              </Link>
             </ListItemIcon>
             <Link to='lancamento-de-os'>
               <ListItemText primary='Lançamento de O.S' />
@@ -53,7 +63,9 @@ const ListMenu = () => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <InboxIcon />
+              <Link to='parceiro-comercial'>
+                <InboxIcon />
+              </Link>
             </ListItemIcon>
             <Link to='parceiro-comercial'>
               <ListItemText primary='Parceiro Comercial' />
@@ -63,9 +75,11 @@ const ListMenu = () => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <InboxIcon />
+              <Link to='portal-de-vendas'>
+                <InboxIcon />
+              </Link>
             </ListItemIcon>
-            <Link to='portal-vendas'>
+            <Link to='portal-de-vendas'>
               <ListItemText primary='Portal de Vendas' />
             </Link>
           </ListItemButton>
