@@ -11,6 +11,7 @@ import PartnerCard from '../components/partnerCard/PartnerCard';
 import OsRelease from '../components/osRelease/OsRelease';
 import CommercialPartner from '../components/commercialPartner/CommercialPartner';
 import SalesPortal from '../components/salesPortal/SalesPortal';
+import { RequireAuth } from '../contexts/Auth/RequireAuth';
 
 const routes = [
   {
@@ -30,7 +31,11 @@ const routes = [
   },
   {
     path: 'layout',
-    element: <Layout />,
+    element: (
+      <RequireAuth>
+        <Layout />
+      </RequireAuth>
+    ),
     children: [
       {
         path: 'dashboard',

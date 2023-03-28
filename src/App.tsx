@@ -9,9 +9,9 @@ import GlobalStyle from './styles/global';
 function App() {
   const [theme, setTheme] = useState('light');
 
-  const themeToggle = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light');
-  };
+  // const themeToggle = () => {
+  //   theme === 'light' ? setTheme('dark') : setTheme('light');
+  // };
 
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>

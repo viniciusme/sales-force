@@ -1,3 +1,4 @@
+import { useContext, useState } from 'react';
 import { FaUserAlt, FaLock, FaEyeSlash } from 'react-icons/fa';
 import styled from '@emotion/styled';
 import { Link, useNavigate } from 'react-router-dom';
@@ -6,6 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
 import Button from '../button/Button';
+import { AuthContext } from '../../contexts/Auth/AuthContext';
 
 const schema = yup
   .object({
@@ -22,6 +24,11 @@ const schema = yup
 type FormData = yup.InferType<typeof schema>;
 
 const FormSign = () => {
+  const auth = useContext(AuthContext);
+
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+
   const {
     register,
     handleSubmit,
@@ -32,10 +39,35 @@ const FormSign = () => {
 
   const navigate = useNavigate();
 
-  const onSubmit = (userData: FormData) => {
-    console.log(userData);
+  const onSubmit = async (userData: FormData) => {
+    // console.log(userData);
+    // console.log(email);
+    // console.log(password);
 
-    navigate('/layout');
+    const isLogged = await auth.signin(email, password);
+    console.log(isLogged);
+
+    if (isLogged) {
+      navigate('/layout');
+    } else {
+      alert('Algo deu errado!');
+    }
+
+    // let content = {
+    //   email,
+    //   password,
+    // };
+
+    // let headers = new Headers();
+    // headers.append('Content-Type', 'application/json');
+
+    // fetch('https://localhost/user/login', {
+    //   method: 'POST',
+    //   body: JSON.stringify(content),
+    //   headers,
+    // });
+
+    // navigate('/layout');
   };
 
   return (
@@ -49,6 +81,7 @@ const FormSign = () => {
               type='text'
               {...register('email')}
               placeholder='Informe o Usuário'
+              onChange={(event) => setEmail(event.target.value)}
             />
           </Label>
           <ErrorEmail>{errors.email?.message}</ErrorEmail>
@@ -62,6 +95,7 @@ const FormSign = () => {
               type='password'
               {...register('password')}
               placeholder='Informe sua Senha'
+              onChange={(event) => setPassword(event.target.value)}
             />
             <IconEye />
           </Label>

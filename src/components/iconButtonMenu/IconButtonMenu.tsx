@@ -4,9 +4,20 @@ import MailIcon from '@mui/icons-material/Mail';
 import { Badge } from '@mui/material';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { AccountCircle } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/Auth/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const IconButtonMenu = () => {
+  const auth = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await auth.signout();
+
+    navigate('/');
+  };
   return (
     <>
       <Box sx={{ flexGrow: 1 }} />
@@ -25,24 +36,26 @@ const IconButtonMenu = () => {
             <NotificationsIcon />
           </Badge>
         </IconButton>
-        <Link to='/'>
-          <IconButton
-            size='large'
-            aria-label='account of current user'
-            aria-controls='menu-appbar'
-            color='inherit'
-          >
-            <AccountCircle
-              sx={{
-                color: '#fff',
-                display: 'inline',
-                fontWeight: 'bold',
-                mx: 0.5,
-                fontSize: 24,
-              }}
-            />
-          </IconButton>
-        </Link>
+        {auth.user && (
+          <a href='/' onClick={handleLogout}>
+            <IconButton
+              size='large'
+              aria-label='account of current user'
+              aria-controls='menu-appbar'
+              color='inherit'
+            >
+              <AccountCircle
+                sx={{
+                  color: '#fff',
+                  display: 'inline',
+                  fontWeight: 'bold',
+                  mx: 0.5,
+                  fontSize: 24,
+                }}
+              />
+            </IconButton>
+          </a>
+        )}
       </Box>
     </>
   );
