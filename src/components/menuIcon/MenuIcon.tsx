@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import ListMenu from '../listMenu/ListMenu';
@@ -44,15 +43,8 @@ export default function TemporaryDrawer() {
 
   return (
     <>
-      <IconButton
-        size='large'
-        edge='start'
-        color='inherit'
-        aria-label='menu'
-        sx={{ mr: 2 }}
-      >
-        <MenuIcon onClick={toggleDrawer('left', true)} />
-      </IconButton>
+      <MenuIcon onClick={toggleDrawer('left', true)} />
+
       <Drawer
         anchor='left'
         open={state['left']}

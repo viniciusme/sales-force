@@ -8,10 +8,10 @@ import Divider from '@mui/material/Divider';
 import { IconButton } from '@mui/material';
 import logoWhite from '../../assets/images/logo/logo-white.svg';
 import styled from 'styled-components';
-import IconButtonMenu from '../../components/iconButtonMenu/IconButtonMenu';
 import MenuIcon from '../../components/menuIcon/MenuIcon';
 import { Outlet } from 'react-router-dom';
 import UserProfile from '../../components/userProfile/UserProfile';
+import IconButtonMenu from '../../components/iconButtonMenu/IconButtonMenu';
 
 const drawerWidth = 240;
 
@@ -72,8 +72,8 @@ export default function ClippedDrawer() {
 }
 
 const Img = styled.img`
-  width: 88px;
-  height: 23px;
-  max-width: 88px;
-  max-height: 23px;
+  width: 100px;
+  height: 26.14px;
+  max-width: 100px;
+  max-height: 26.14px;
 `;

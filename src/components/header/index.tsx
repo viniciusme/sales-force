@@ -5,17 +5,6 @@ const Header = () => {
     <>
       <header className='App-header'>
         <img src={logoFavicon} className='App-logo' alt='logo' />
-        <p>
-          Edite o arquivo <code>src/App.tsx</code> e salve para recarregar.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
       </header>
     </>
   );
