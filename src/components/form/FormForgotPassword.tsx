@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from '@emotion/styled';
 import { MdEmail } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
@@ -44,14 +45,24 @@ const FormForgotPassword = () => {
 
   const navigate = useNavigate();
 
-  const onSubmit = (userData: FormData) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onSubmit = async (userData: FormData) => {
     console.log(userData);
 
-    notify();
+    setIsLoading(true);
 
-    const timeout = setTimeout(() => {
-      navigate('/');
-    }, 6500);
+    try {
+      await new Promise<void>((resolve) => setTimeout(() => resolve(), 200)); // simula uma chamada API
+    } catch (error) {
+      console.error(error);
+    } finally {
+      notify();
+
+      setTimeout(() => {
+        navigate('/');
+      }, 4500);
+    }
   };
 
   return (
@@ -69,7 +80,11 @@ const FormForgotPassword = () => {
           </Label>
           <ErrorPassword>{errors.email?.message}</ErrorPassword>
           <CardAction>
-            <Button type='submit' value='Recuperar Senha' />
+            <Button
+              type='submit'
+              value='Recuperar Senha'
+              disabled={isLoading}
+            />
           </CardAction>
         </Section>
       </Form>

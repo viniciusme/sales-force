@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FaUserAlt, FaLock, FaEyeSlash, FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import styled from '@emotion/styled';
@@ -58,14 +59,24 @@ const FormSignUp = () => {
 
   const navigate = useNavigate();
 
-  const onSubmit = (userData: FormData) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onSubmit = async (userData: FormData) => {
     console.log(userData);
 
-    notify();
+    setIsLoading(true);
 
-    const timeout = setTimeout(() => {
-      navigate('/');
-    }, 6500);
+    try {
+      await new Promise<void>((resolve) => setTimeout(() => resolve(), 200)); // simula uma chamada API
+    } catch (error) {
+      console.error(error);
+    } finally {
+      notify();
+
+      setTimeout(() => {
+        navigate('/');
+      }, 4500);
+    }
   };
 
   console.log(errors);
@@ -141,7 +152,7 @@ const FormSignUp = () => {
         </Section>
 
         <CardAction>
-          <Button type='submit' value='Cadastrar' />
+          <Button type='submit' value='Cadastrar' disabled={isLoading} />
         </CardAction>
       </Form>
 
