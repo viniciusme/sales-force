@@ -4,7 +4,6 @@ import Exception from '../components/shared/Exception';
 import Login from '../pages/login';
 import Cadastro from '../pages/cadastrar';
 import RecuperarSenha from '../pages/recuperar-senha';
-import Layout from '../layout/layout';
 import Schedule from '../components/schedule/Schedule';
 import Dashboard from '../pages/dashboard';
 import PartnerCard from '../components/partnerCard/PartnerCard';
@@ -12,6 +11,8 @@ import OsRelease from '../components/osRelease/OsRelease';
 import CommercialPartner from '../components/commercialPartner/CommercialPartner';
 import SalesPortal from '../components/salesPortal/SalesPortal';
 import { RequireAuth } from '../contexts/Auth/RequireAuth';
+import Private from '../pages/private';
+import DataPerfil from '../components/dataPerfil/DataPerfil';
 
 const routes = [
   {
@@ -30,10 +31,10 @@ const routes = [
     element: <RecuperarSenha />,
   },
   {
-    path: 'layout',
+    path: 'private',
     element: (
       <RequireAuth>
-        <Layout />
+        <Private />
       </RequireAuth>
     ),
     children: [
@@ -60,6 +61,10 @@ const routes = [
       {
         path: 'portal-de-vendas',
         element: <SalesPortal />,
+      },
+      {
+        path: 'perfil',
+        element: <DataPerfil />,
       },
     ],
   },

@@ -48,7 +48,7 @@ const FormSign = () => {
     console.log(isLogged);
 
     if (isLogged) {
-      navigate('/layout');
+      navigate('/private');
     } else {
       alert('Algo deu errado!');
     }

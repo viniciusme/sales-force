@@ -5,8 +5,21 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { ToastContainer, toast } from 'react-toastify';
 
 import Button from '../button/Button';
+
+const notify = () =>
+  toast.success('Usuário cadastrado com sucesso!', {
+    position: 'top-right',
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: 'colored',
+  });
 
 const schema = yup
   .object({
@@ -48,7 +61,11 @@ const FormSignUp = () => {
   const onSubmit = (userData: FormData) => {
     console.log(userData);
 
-    navigate('/');
+    notify();
+
+    const timeout = setTimeout(() => {
+      navigate('/');
+    }, 6500);
   };
 
   console.log(errors);
@@ -127,6 +144,8 @@ const FormSignUp = () => {
           <Button type='submit' value='Cadastrar' />
         </CardAction>
       </Form>
+
+      <ToastContainer />
     </>
   );
 };

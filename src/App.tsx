@@ -6,6 +6,8 @@ import Route from './routes/Route';
 import { lightTheme, darkTheme } from './styles/Theme';
 import GlobalStyle from './styles/global';
 
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   const [theme, setTheme] = useState('light');
 
