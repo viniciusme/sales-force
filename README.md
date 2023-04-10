@@ -52,9 +52,6 @@ Este projeto é uma Web App desenvolvida com foco no estudo acadêmico, foi dese
 
 Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
 
-A página será recarregada se você fizer edições.\
-Você também verá quaisquer erros de lint no console.
-
 ###### Como utilizar este projeto?
 
 Para entrar no sistema será necessário logar com e-mail e senha, para este processo poderá utilizar qualquer e-mail e senha. Ao efetuar o login será realizado algumas validações e caso não esteja dentro dos parâmetros será apresentado uma mensagem para o usuário.
