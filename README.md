@@ -27,18 +27,22 @@ Este projeto é uma Web App desenvolvida com foco no estudo acadêmico, foi dese
 
 ##### Funcionalidades
 
-- Cadastro de usuários
-- Login de usuários
-- Detalhes do Usuário
-- Logout
-- Menu de Navegação
-- Context API
+- Cadastro de usuários "com validação e mensagem ao usuário através do Toastify de cadastro realizado com sucesso".
+- Login de usuários com validação.
+- Recuperar senha "Com validação e mensagem ao usuário através do Toastify de recuperação de senha"
+- Logout "Ao efetuar logout através do icone de Logout, o token será deletado e o usuário encaminhando para a tela de login"
+- Detalhes do Usuário "Ao clicar no icone de configuração do usuário, será renderizado um component com dados do usuário logado."
+- Menu de Navegação "É para mostrar a funcionalidade do Outlet"
+- Context API "Para repassar os dados do usuário e mostrar no detalhes do perfil de usuário"
+- useState "Para persistência de dados dos formulários"
 - Hooks
 - Components
-- Routes
+- Routes "Rotas publicas e rotas privadas"
+- Armazenamento de Toke no LocalStorage"
 - Pages
 - Types
 - Tests
+- Personalização e estilos através do styled component
 
 ###### Instalação
 
@@ -54,7 +58,12 @@ Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navega
 
 ###### Como utilizar este projeto?
 
-Para entrar no sistema será necessário logar com e-mail e senha, para este processo poderá utilizar qualquer e-mail e senha. Ao efetuar o login será realizado algumas validações e caso não esteja dentro dos parâmetros será apresentado uma mensagem para o usuário.
+Para entrar no sistema será necessário logar com e-mail e senha, para este processo poderá utilizar qualquer e-mail e senha. Ao efetuar o login será realizado algumas validações e caso não esteja dentro dos parâmetros de validação será apresentado uma mensagem para o usuário.
+
+Por não conter uma API Backend, foi utilizado dados fake para este projeto. Recomendo a utilização dos dados abaixo para login:
+
+- E-mail: viniciusdeveloper@gmail.com
+- Senha: 12345678
 
 ###### Licença
 

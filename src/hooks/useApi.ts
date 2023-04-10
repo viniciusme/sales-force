@@ -9,8 +9,8 @@ export const useApi = () => ({
     return {
       user: {
         id: 1,
-        name: 'Vinicius Mendes',
-        email: 'vinimendesdev@gmail.com',
+        name: 'Vinicius Developer',
+        email: 'viniciusdeveloper@gmail.com',
         phone: '34999999999',
         birth: '04/04/2023',
         city: 'Uberlândia',
@@ -27,8 +27,12 @@ export const useApi = () => ({
     return {
       user: {
         id: 1,
-        name: 'Vinicius Mendes',
-        email: 'vinimendesdev@gmail.com',
+        name: 'Vinicius Developer',
+        email: 'viniciusdeveloper@gmail.com',
+        phone: '34999999999',
+        birth: '04/04/2023',
+        city: 'Uberlândia',
+        uf: 'Minas Gerais',
       },
       token: 'pihjbgadqsC1548@$piuygdefswAS',
     };
