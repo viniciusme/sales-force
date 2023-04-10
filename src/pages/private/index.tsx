@@ -61,7 +61,7 @@ export default function ClippedDrawer() {
             <UserProfile />
           </Box>
           <Divider />
-          <Box>Teste</Box>
+          <Box></Box>
         </Box>
       </Drawer>
       <Box component='main' sx={{ flexGrow: 1, p: 10 }}>

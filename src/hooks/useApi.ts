@@ -11,6 +11,10 @@ export const useApi = () => ({
         id: 1,
         name: 'Vinicius Mendes',
         email: 'vinimendesdev@gmail.com',
+        phone: '34999999999',
+        birth: '04/04/2023',
+        city: 'Uberlândia',
+        uf: 'Minas Gerais',
       },
     };
 

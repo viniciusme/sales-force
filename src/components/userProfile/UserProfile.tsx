@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { FaUserAlt, FaEllipsisH } from 'react-icons/fa';
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+import PersonIcon from '@mui/icons-material/Person';
 
 import userAvatar from '../../assets/images/avatar/avatar.svg';
 import { AuthContext } from '../../contexts/Auth/AuthContext';
@@ -12,11 +13,10 @@ const UserProfile = () => {
   return (
     <Section>
       <Container>
-        <PersonIconMobile />
         <IconsSettingsProfile>
-          <IconPerfilUser />
+          <IconPerfilUser sx={{ fontSize: 25 }} />
           <Link to='perfil'>
-            <IconSettings />
+            <IconSettings sx={{ fontSize: 25 }} />
           </Link>
         </IconsSettingsProfile>
         <ImagePerfil>
@@ -47,21 +47,17 @@ const Container = styled.div`
   padding: 20px 5px 20px 5px;
 `;
 
-const PersonIconMobile = styled(FaUserAlt)`
-  display: none;
-`;
-
 const IconsSettingsProfile = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
-const IconPerfilUser = styled(FaUserAlt)`
+const IconPerfilUser = styled(PersonIcon)`
   color: #797979;
 `;
 
-const IconSettings = styled(FaEllipsisH)`
+const IconSettings = styled(SettingsSuggestIcon)`
   color: #797979;
 `;
 
