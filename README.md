@@ -4,8 +4,8 @@ Este projeto foi inicializado com [Create React App](https://github.com/facebook
 
 ## Links Referente ao Projeto
 
-Link do Repositório no GitHub: (https://github.com/viniciusme/sales-force).
-Link do Projeto na Vercel: (https://sales-force.vercel.app/).
+- Link do Repositório no GitHub: (https://github.com/viniciusme/sales-force).
+- Link do Projeto na Vercel: (https://sales-force.vercel.app/).
 
 ### O que é este projeto?
 
@@ -48,7 +48,7 @@ Este projeto é uma Web App desenvolvida com foco no estudo acadêmico, foi dese
 
 ###### USO
 
-4. Executa o aplicativo no modo de desenvolvimento: `npm start`
+1. Executa o aplicativo no modo de desenvolvimento: `npm start`
 
 Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
 
