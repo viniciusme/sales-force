@@ -41,7 +41,7 @@ Este projeto é uma Web App desenvolvida com foco no estudo acadêmico, foi dese
 - Armazenamento de Toke no LocalStorage"
 - Pages
 - Types
-- Tests
+- Tests - "Realizado teste no component formSign.tsx"
 - Personalização e estilos através do styled component
 
 ###### Instalação
