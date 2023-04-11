@@ -78,6 +78,7 @@ const FormSign = () => {
             Digite seu nome de usuário
             <IconUser />
             <Input
+              data-testid='email'
               type='text'
               {...register('email')}
               placeholder='Informe o Usuário'
@@ -92,6 +93,7 @@ const FormSign = () => {
             Digite sua senha de acesso
             <IconPadlock />
             <Input
+              data-testid='password'
               type='password'
               {...register('password')}
               placeholder='Informe sua Senha'
@@ -105,7 +107,7 @@ const FormSign = () => {
           </ForgotPassword>
         </Section>
         <CardAction>
-          <Button type='submit' value='Acessar' />
+          <Button data-testid='acessar' type='submit' value='Acessar' />
         </CardAction>
       </Form>
     </>

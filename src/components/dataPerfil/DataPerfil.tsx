@@ -4,7 +4,6 @@ import { Form } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { AuthContext } from '../../contexts/Auth/AuthContext';
-import Button from '../button/Button';
 
 const DataPerfil = () => {
   const user = useContext(AuthContext);
